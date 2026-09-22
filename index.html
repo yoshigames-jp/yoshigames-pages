@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yoshi Games</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --background: #f7f9fc;
+      --surface: #ffffff;
+      --text: #20252d;
+      --muted: #667080;
+      --accent: #405de6;
+      --border: #e3e7ee;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans", Meiryo, sans-serif;
+      line-height: 1.8;
+    }
+
+    .container {
+      width: min(100% - 32px, 920px);
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 72px 0 64px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      letter-spacing: 0.04em;
+      line-height: 1.2;
+    }
+
+    .tagline {
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 2.5vw, 1.15rem);
+    }
+
+    section {
+      padding: 32px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(32, 37, 45, 0.05);
+    }
+
+    h2 {
+      margin: 0 0 22px;
+      font-size: 1.45rem;
+      line-height: 1.4;
+    }
+
+    .apps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .app-card {
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .app-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.15rem;
+    }
+
+    .app-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 14px;
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    footer {
+      padding: 48px 0 32px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 560px) {
+      .container { width: min(100% - 20px, 920px); }
+      header { padding: 52px 0 44px; }
+      section { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Yoshi Games</h1>
+      <p class="tagline">シンプルで楽しいスマートフォンゲームを制作しています。</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section aria-labelledby="apps-title">
+      <h2 id="apps-title">アプリ一覧</h2>
+      <div class="apps">
+        <article class="app-card">
+          <h3>パールの数字あそび</h3>
+          <p>数字を組み合わせて遊ぶ、シンプルなパズルゲームです。</p>
+          <a href="privacy.html">プライバシーポリシー</a>
+        </article>
+
+        <!-- 新しいアプリは、このarticle要素を追加して掲載できます。 -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">&copy; Yoshi Games</div>
+  </footer>
+</body>
+</html>
